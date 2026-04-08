@@ -1,48 +1,34 @@
-\# 🍽️ Food Waste Management System  
+🍽️ Food Waste Reduction Platform  
 
 
-
-\## 📌 Overview  
+📌 Overview  
 
 The \*\*Food Waste Management System\*\* is a full-stack web application designed to reduce food wastage by connecting \*\*restaurants (food donors)\*\* with \*\*NGOs and volunteers (food receivers)\*\*. This platform ensures that surplus food is efficiently redistributed to those in need instead of being wasted.
 
 
-
-\---
-
-
-
-\## 🎯 Problem Statement  
+ 🎯 Problem Statement  
 
 Food waste is a major issue in urban areas where restaurants generate surplus food daily, while many people struggle with hunger. There is no efficient real-time system to connect food donors with NGOs. This project aims to bridge that gap.
 
 
-
-\---
-
+ 🚀 Features  
 
 
-\## 🚀 Features  
-
-
-
-\### 🔐 Authentication  
+ 🔐 Authentication  
 
 \- Secure Signup \& Login  
 
 \- Role-based access (Restaurant / NGO / Admin)
 
 
-
-\### 🍴 Restaurant Dashboard  
+ 🍴 Restaurant Dashboard  
 
 \- Add food donation (food name, quantity, location, expiry time)  
 
 \- View, update, and delete donations  
 
 
-
-\### 🤝 NGO / Volunteer Dashboard  
+ 🤝 NGO / Volunteer Dashboard  
 
 \- View available food donations  
 
@@ -51,8 +37,7 @@ Food waste is a major issue in urban areas where restaurants generate surplus fo
 \- Track claimed items  
 
 
-
-\### 🛠️ Admin Panel  
+ 🛠️ Admin Panel  
 
 \- Manage users  
 
@@ -62,7 +47,7 @@ Food waste is a major issue in urban areas where restaurants generate surplus fo
 
 
 
-\### 📍 Additional Features  
+📍 Additional Features  
 
 \- Real-time status (Available / Claimed / Delivered)  
 
@@ -74,12 +59,7 @@ Food waste is a major issue in urban areas where restaurants generate surplus fo
 
 
 
-\---
-
-
-
-\## 🛠️ Tech Stack  
-
+🛠️ Tech Stack  
 
 
 \*\*Frontend:\*\*  
@@ -106,11 +86,7 @@ Food waste is a major issue in urban areas where restaurants generate surplus fo
 
 
 
-\---
-
-
-
-\## 📂 Project Structure  
+📂 Project Structure  
 
 food-waste-management/
 
@@ -137,8 +113,11 @@ food-waste-management/
 │ ├── index.html
 
 │
-
 │── README.md
+
+🔗Deployment Link:
+
+https://crossed-game-crow.3000.dev.raccoonai.tech
 
 
 
