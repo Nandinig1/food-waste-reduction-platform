@@ -96,9 +96,7 @@ Food waste is a major issue in urban areas where restaurants generate surplus fo
 
 \*\*Backend:\*\*  
 
-\- Node.js  
-
-\- Express.js  
+\- Node.js 
 
 
 
