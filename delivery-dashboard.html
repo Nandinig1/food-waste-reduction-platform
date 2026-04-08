@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Dashboard - SmartServe AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="app.css">
+  <style>
+    .dashboard-layout {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 2rem;
+      padding: 2rem;
+      margin-top: 60px;
+      height: calc(100vh - 60px);
+    }
+    .panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+    #delivery-map {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      border: 1px solid var(--glass-border);
+    }
+    .task-card {
+      padding: 1.5rem;
+      border-left: 4px solid var(--accent-orange);
+    }
+    .task-status {
+      font-size: 0.8rem;
+      padding: 3px 8px;
+      border-radius: 12px;
+      background: rgba(255, 152, 0, 0.2);
+      color: var(--accent-orange);
+    }
+    .btn-green {
+      background: var(--accent-green);
+      color: var(--bg-dark);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      border: none;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .btn-green:hover {
+      box-shadow: 0 0 15px rgba(0, 230, 118, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">SmartServe AI <span>| Delivery</span></div>
+    <div class="nav-links">
+      <a href="index.html">Logout</a>
+    </div>
+  </nav>
+
+  <div class="dashboard-layout">
+    <div class="panel glass-panel">
+      <h2><i class="fas fa-truck text-gradient"></i> Delivery Tasks</h2>
+      <p style="color:var(--text-primary); font-weight: 600; font-size: 1.1rem;">Welcome, <span id="displayOrgName" class="text-gradient">Driver</span></p>
+      <p style="color:var(--text-secondary); font-size:0.9rem;">Optimized routes for food pickup and delivery.</p>
+      
+      <div id="delivery-tasks-container">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+    
+    <div class="glass-panel" style="padding: 0;">
+      <div id="delivery-map"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

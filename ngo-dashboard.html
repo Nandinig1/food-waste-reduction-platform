@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Dashboard - SmartServe AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">SmartServe <span style="font-size:1rem; color:var(--text-secondary); margin-left:10px;">NGO Portal</span></a>
+    <div class="nav-links">
+      <a href="index.html">Logout <i class="fas fa-sign-out-alt"></i></a>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top: 120px;">
+    <h1 id="welcomeMessage" style="margin-bottom: 1.5rem; font-size: 2.5rem;">Welcome, <span class="text-gradient" id="displayOrgName">NGO</span></h1>
+    
+    <div class="dashboard-header">
+      <div>
+        <h2 style="font-size: 2rem;">Available Donated Food</h2>
+        <p style="color: var(--text-secondary); margin-top: 5px;"><i class="fas fa-map-marker-alt"></i> Showing listings within 10km of your location.</p>
+      </div>
+      <div>
+        <div class="glass-panel" style="padding: 10px 20px; display: inline-flex; align-items: center; gap: 10px;">
+          <i class="fas fa-hand-holding-heart text-gradient" style="font-size: 1.5rem;"></i>
+          <div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">Meals Sourced</div>
+            <div style="font-weight: 800; font-size: 1.2rem;" id="meals-saved">1,240</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map container -->
+    <div id="ngo-map" style="margin-bottom: 2rem;"></div>
+
+    <div class="grid-3" id="listings-container">
+      <!-- Listings dynamically populated by app.js -->
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

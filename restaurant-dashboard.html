@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Dashboard - SmartServe AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="app.css">
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">SmartServe <span
+        style="font-size:1rem; color:var(--text-secondary); margin-left:10px;">Restaurant Portal</span></a>
+    <div class="nav-links">
+      <a href="index.html">Logout <i class="fas fa-sign-out-alt"></i></a>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top: 120px;">
+    <h1 id="welcomeMessage" style="margin-bottom: 1.5rem; font-size: 2.5rem;">Welcome, <span class="text-gradient" id="displayOrgName">Partner</span></h1>
+
+    <div class="grid-2" style="margin-bottom: 2rem;">
+      <div class="glass-panel" style="padding: 2rem;">
+        <h2 style="margin-bottom: 1.5rem; font-size: 1.8rem;"><i class="fas fa-plus-circle text-gradient"></i> Post Food
+          Donation</h2>
+        <form id="donateForm">
+          <div class="form-group">
+            <label for="foodType">Food Type / Description</label>
+            <div style="display:flex; gap:10px;">
+              <input type="text" id="foodType" required placeholder="e.g., 20 boxes of fresh sandwiches"
+                style="flex:1;">
+              <button type="button" class="btn-secondary" id="analyzeFreshnessBtn"
+                style="padding: 0 1rem; height: 100%; border-radius: 12px;"><i class="fas fa-magic"></i> AI
+                Analyze</button>
+            </div>
+            <div id="freshnessPrediction" class="ai-prediction-box" style="display: none;"></div>
+          </div>
+          <div class="grid-2" style="gap: 1rem;">
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input type="text" id="quantity" required placeholder="e.g., 20 meals">
+            </div>
+            <div class="form-group">
+              <label for="expiryTime">Expiry Time (Hours)</label>
+              <input type="number" id="expiryTime" required placeholder="e.g., 4" min="1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="location">Pickup Location (Branch / Pin on Map)</label>
+            <input type="text" id="location" required placeholder="Downtown Branch Main Entrance">
+            <div id="map"></div>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%;">List for Donation</button>
+        </form>
+      </div>
+
+      <div class="glass-panel"
+        style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <h2 style="margin-bottom: 1.5rem; font-size: 1.8rem;">Your Impact</h2>
+          <div class="impact-card" style="padding: 1rem 0;">
+            <h2 class="text-gradient">345</h2>
+            <p style="color: var(--text-secondary)">Total Meals Donated</p>
+          </div>
+          <div class="impact-card" style="padding: 1rem 0;">
+            <h2 class="text-gradient"><span id="active-listings">3</span></h2>
+            <p style="color: var(--text-secondary)">Active Food Listings</p>
+          </div>
+        </div>
+        <div style="padding-top:1rem; border-top:1px solid var(--glass-border); text-align:center;">
+          <p style="color:var(--accent-green); font-weight:600;"><i class="fas fa-certificate"></i> Verified Gold
+            Sponsor</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap');
+
+:root {
+  --bg-dark: #0a0f1a;
+  --bg-card: rgba(18, 25, 43, 0.45);
+  --bg-card-hover: rgba(28, 38, 64, 0.6);
+  --text-primary: #f0f4ff;
+  --text-secondary: #94a3b8;
+  --accent-green: #00e676;
+  --accent-blue: #00b0ff;
+  --accent-purple: #b388ff;
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --shadow-glow: 0 0 20px rgba(0, 230, 118, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background-image: radial-gradient(circle at 15% 50%, rgba(0, 230, 118, 0.06), transparent 25%),
+                    radial-gradient(circle at 85% 30%, rgba(0, 176, 255, 0.06), transparent 25%);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* Navbar */
+nav {
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 15, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--accent-green), #00c853);
+  color: #000;
+  border-radius: 50px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 15px var(--accent-green);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--text-primary);
+  border-radius: 50px;
+  font-weight: 700;
+  border: 1px solid var(--accent-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  background: rgba(0, 176, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 176, 255, 0.3);
+}
+
+/* Layout Core */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.form-group input, .form-group select, .form-group textarea {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border 0.3s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--accent-blue);
+}
+
+/* Typography styles */
+.text-gradient {
+  background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Layout Utilities */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+/* Status Badges */
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.badge.urgent { background: rgba(255, 61, 0, 0.2); color: #ff3d00; border: 1px solid rgba(255, 61, 0, 0.5); }
+.badge.normal { background: rgba(0, 230, 118, 0.2); color: #00e676; border: 1px solid rgba(0, 230, 118, 0.5); }
+
+/* Impact Cards */
+.impact-card {
+  text-align: center;
+  padding: 2rem;
+}
+.impact-card h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--glass-border);
+}
+
+/* Page specific */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.listing-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.listing-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.modal.active { display: flex; }
+.modal-content {
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 3rem; }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* Map Container Styles */
+#map, #ngo-map {
+  height: 300px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  margin-top: 1rem;
+  z-index: 1; /* Keep map below navbar */
+}
+
+/* Mock AI Badges / Predictor Badges */
+.badge.fresh { background: rgba(0, 230, 118, 0.2); color: #00e676; border: 1px solid rgba(0, 230, 118, 0.5); }
+.badge.leftover { background: rgba(255, 171, 0, 0.2); color: #ffab00; border: 1px solid rgba(255, 171, 0, 0.5); }
+.badge.trust { background: rgba(0, 176, 255, 0.2); color: #00b0ff; border: 1px solid rgba(0, 176, 255, 0.5); }
+.badge.fake { background: rgba(255, 61, 0, 0.2); color: #ff3d00; border: 1px solid rgba(255, 61, 0, 0.5); }
+
+.ai-prediction-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px dashed var(--accent-blue);
+  font-size: 0.9rem;
+}
