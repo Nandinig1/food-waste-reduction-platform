@@ -1,0 +1,16 @@
+[
+    {
+        "food": " chapati",
+        "quantity": "20",
+        "expiry": 4,
+        "donorName": "The Next Chapter",
+        "baseAddress": "",
+        "location": "yelahanka",
+        "lat": 13.168901585314552,
+        "lng": 77.53356973583,
+        "status": "normal",
+        "freshness": "fresh",
+        "ngoClaimed": null,
+        "id": 1
+    }
+]
