@@ -66,9 +66,7 @@ Food waste is a major issue in urban areas where restaurants generate surplus fo
 
 \- HTML  
 
-\- CSS  
-
-\- Bootstrap  
+\- CSS    
 
 \- JavaScript  
 
@@ -82,7 +80,7 @@ Food waste is a major issue in urban areas where restaurants generate surplus fo
 
 \*\*Database:\*\*  
 
-\- MongoDB (Mongoose)  
+\- Local Database storage 
 
 
 
